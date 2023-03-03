@@ -1,0 +1,13 @@
+provider "aws" {
+  region     = "eu-west-3"
+  access_key = "AKIARTZ64IGLAMXBBDOJ"
+  secret_key = "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"
+}
+resource "aws_instance" "my_ec2_instance" {
+  ami           = "ami-05b457b541faec0ca"
+  instance_type = "t2.micro"
+  tags = {
+    Name = "missou-terraform"
+    }
+
+}
